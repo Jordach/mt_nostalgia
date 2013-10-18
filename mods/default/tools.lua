@@ -57,17 +57,22 @@ minetest.register_tool("default:pick_iron", {
 	},
 })
 
+-- Mesepick is copy pasted code from tbm_mod's carbon diamond pick
+
 minetest.register_tool("default:pick_mese", {
-	description = "Mese Pickaxe",
-	inventory_image = "tool_mesepick.png^[transformR270",
-	tool_capabilities = {
-		full_punch_interval = 0.05,
-		max_drop_level=3,
-		groupcaps={
-			cracky = {times={[1]=2.4, [2]=1.2, [3]=0.60}, uses=20, maxlevel=3},
-		},
-		damage_groups = {fleshy=5},
-	},
+        description = "Mese Pickaxe",
+        inventory_image = "tool_mesepick.png^[transformR270",
+        tool_capabilities = {
+                full_punch_interval = 0.05,
+                max_drop_level=3,
+                groupcaps={
+                        cracky = {times={[1]=0.00005, [2]=0.00005, [3]=0.00005}, uses=60, maxlevel=3},
+                        crumbly = {times={[1]=0.00005, [2]=0.00005, [3]=0.00005}, uses=60, maxlevel=3},
+                        choppy = {times={[1]=0.00005, [2]=0.00005, [3]=0.00005}, uses=60, maxlevel=3},
+                        snappy = {times={[1]=0.00005, [2]=0.00005, [3]=0.00005}, uses=60, maxlevel=3},
+                },
+                damage_groups = {fleshy=12},
+        },
 })
 
 ---
